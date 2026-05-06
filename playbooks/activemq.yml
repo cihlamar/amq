@@ -3,3 +3,5 @@
   hosts: all
   roles:
    - middleware_automation.amq.activemq
+  tasks:
+  - maybe_bug: Hi
