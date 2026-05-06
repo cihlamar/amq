@@ -68,10 +68,15 @@ def create_security_matches(amq_broker_roles):
             )
 
         match_pattern = role.get('match') or '#'
-        permissions = role.get('permissions', [])
+        permissions = role.get('permissions') or []
 
         if match_pattern not in result:
             result[match_pattern] = {}
+
+        if not isinstance(permissions, list):
+            raise AnsibleFilterError(
+                f"Role '{role_name}' has non-list permissions field: {type(permissions).__name__}"
+            )
 
         for permission in permissions:
             if permission not in result[match_pattern]:
