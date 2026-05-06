@@ -1,7 +1,3 @@
 reviews:                                                                    
   auto_review:                                                                                                                                                                                                                                                                                                                                                        
     enabled: true
-    base_branches:                                                                                                                                                                                                                                                                                                                                                    
-      - main      
-      - coderabbit-base                                                                                                                                                                                                                                                                                                            
-      - assertive-base
