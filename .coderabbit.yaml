@@ -1,10 +1,7 @@
 reviews:
   auto_review:
     enabled: false
-    base_branches:
-    - "main"
-    - "coderabbit-base"
-    - "assertive-base"
+    # base_branches:
   tools:
     yamllint:
       enabled: false
