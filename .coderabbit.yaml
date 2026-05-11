@@ -1,0 +1,14 @@
+reviews:
+  auto_review:
+    enabled: false
+    base_branches:
+    - "main"
+    - "coderabbit-base"
+    - "assertive-base"
+  tools:
+    yamllint:
+      enabled: false
+    ansible-lint:
+      enabled: false
+  reviews:
+    high_level_summary: true
