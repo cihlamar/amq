@@ -1,6 +1,15 @@
+<<<<<<< coderabbit-test-auto-trigger
 reviews:                                                                    
   auto_review:                                                                                                                                                                                                                                                                                                                                                        
     enabled: true
       base_branches:                                                                                                                                                                                                                                                                                                                                             
         -  "coderabbit-base"                                                                                                                                                                                                                                                                                                                                      
         -  "assertive-base"    
+=======
+reviews:
+  auto_review:
+    enabled: false
+    base_branches:
+      - "coderabbit-base"
+      - "assertive-base"
+>>>>>>> assertive-base
