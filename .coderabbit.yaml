@@ -1,13 +1,14 @@
 reviews:
-  profile: chill
+  profile: assertive
   effort_estimation: true
   high_level_summary: true
   auto_review:
     enabled: true
-      # base_branches:
     drafts: false
   tools:
     yamllint:
-      enabled: false
+      enabled: true
     ansible-lint:
-      enabled: false
+      enabled: true
+    ruff:
+      enabled: true
