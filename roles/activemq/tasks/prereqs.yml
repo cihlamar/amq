@@ -156,3 +156,4 @@
   ansible.builtin.include_tasks: fastpackages.yml
   vars:
     packages_list: "{{ activemq.package_list }}"
+
