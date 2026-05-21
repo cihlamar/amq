@@ -1,14 +1,4 @@
 reviews:
   profile: assertive
-  effort_estimation: true
-  high_level_summary: true
   auto_review:
     enabled: true
-    drafts: false
-  tools:
-    yamllint:
-      enabled: true
-    ansible-lint:
-      enabled: true
-    ruff:
-      enabled: true
