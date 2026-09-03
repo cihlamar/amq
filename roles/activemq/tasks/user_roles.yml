@@ -24,13 +24,13 @@
 - name: Set unique role lists
   ansible.builtin.set_fact:
     activemq_unique_security_settings_roles: "{{ activemq_roles | map(attribute='name') | list | unique | sort }}"
-    activemq_unique_default_managmement_roles: "{{ activemq_management_access_default | map(attribute='roles') | flatten | unique | sort }}"
-    activemq_unique_managmement_roles: "{{ activemq_management_access_domains | map(attribute='accesses') | flatten | map(attribute='roles') | flatten | unique | sort }}"
+    activemq_unique_default_management_roles: "{{ activemq_management_access_default | map(attribute='roles') | flatten | unique | sort }}"
+    activemq_unique_management_roles: "{{ activemq_management_access_domains | map(attribute='accesses') | flatten | map(attribute='roles') | flatten | unique | sort }}"
 
 - name: Collect all activemq roles
   ansible.builtin.set_fact:
     activemq_all_roles: "{{ activemq_hawtio_roles | unique | union(activemq_unique_security_settings_roles) | \
-                   union(activemq_unique_default_managmement_roles) | union(activemq_unique_managmement_roles) | sort }}"
+                   union(activemq_unique_default_management_roles) | union(activemq_unique_management_roles) | sort }}"
 
 - name: Configure roles
   ansible.builtin.template:
@@ -68,8 +68,8 @@
   ansible.builtin.lineinfile:
     path: "{{ activemq.instance_home }}/etc/artemis.profile"
     regexp: '^HAWTIO_ROLES?=.*'
-    line: "HAWTIO_ROLE{{ hawtio_roles }}='{{ activemq_hawtio_roles | unique | union(activemq_unique_default_managmement_roles) | \
-                                      union(activemq_unique_managmement_roles) | sort | join(',') }}'"
+    line: "HAWTIO_ROLE{{ hawtio_roles }}='{{ activemq_hawtio_roles | unique | union(activemq_unique_default_management_roles) | \
+                                      union(activemq_unique_management_roles) | sort | join(',') }}'"
   become: "{{ activemq_install_require_privileges_escalation | default(true) }}"
   vars:
     hawtio_roles: "{{ '' if (not amq_broker_enable | default(false) and activemq_version is version_compare('2.40.0', '<')) \

@@ -265,7 +265,7 @@ activemq_jmx_exporter_enabled: false
 activemq_jmx_exporter_package: prometheus-jmx-exporter-openjdk11
 activemq_prometheus_enabled: false
 
-### Contoller defaults
+### Controller defaults
 activemq_local_archive_repository: "{{ lookup('env', 'PWD') }}"
 
 ### Acceptors configuration

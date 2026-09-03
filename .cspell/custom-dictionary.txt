@@ -1,0 +1,64 @@
+# AMQ / ActiveMQ / Ansible domain-specific words
+# Only terms NOT covered by built-in dictionaries (java, bash, shellscript,
+# fullstack, softwareTerms, software-tools, cpp-compound-words, python)
+
+# Product names and projects
+activemq
+ActiveMQ
+Infinispan
+
+# AMQ / Artemis terms
+jolokia
+Jolokia
+Djolokia
+hawtio
+HAWTIO
+Dhawtio
+hornetq
+HORNETQ
+jaas
+JAAS
+jgroups
+jndi
+NAKACK
+libaio
+invm
+mbean
+percentual
+
+# Ansible terms
+fqcn
+FQCN
+lineinfile
+wantlist
+
+# Red Hat / Linux terms
+firewalld
+
+# CI / DevOps
+sangonzal
+rootperm
+
+# Collection-specific identifiers
+ggraziol
+rchakrab
+
+# Molecule testing
+amqbrokerpass
+amqbusinesspass
+amqoperatorpass
+amqotherpass
+ansiblemiddleware
+forumsys
+topicsmanager
+otherencoded
+TESTDIVERT
+systemdunit
+
+# RST / Sphinx directives
+toctree
+asciinema
+
+# Miscellaneous
+subcomponent
+Wildfly

@@ -93,7 +93,7 @@
       register: this
       no_log: True
 
-    - name: Check jolokia fine grained authentorization access
+    - name: Check jolokia fine grained authorization access
       ansible.builtin.uri:
         url: "{{ 'http://0.0.0.0:8161/console/jolokia/exec/' + operation.mbean }}"
         user: "{{ operation.user }}"
